@@ -3,6 +3,7 @@
 # Author 
 Joram Wayne Muya Maina 
 
+## About 
 A command-line Python application to help users track and manage their daily expenses. The app uses **SQLAlchemy ORM** with a **SQLite** database and offers features like adding expenses, viewing them, filtering by date or category, and managing users and categories.
 
 ---
