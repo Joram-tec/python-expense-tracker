@@ -49,6 +49,10 @@ A command-line Python application to help users track and manage their daily exp
 - git clone git@github.com:Joram-tec/python-expense-tracker.git
 - cd expense_tracker
 
+# INSTALLATION of SQLalchemy
+# pip install sqlalchemy 
+
+
 ## 2. Set up the Virtual environment
 - pipenv install
 - pipenv shell
