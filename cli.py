@@ -3,7 +3,7 @@ from services import (
     create_user, create_category, add_expense,
     get_all_users, get_all_categories, view_expenses,
     filter_expenses_by_category, filter_expenses_by_date,
-    update_expense
+    update_expense, delete_user_by_name, delete_expense_by_description
 )
 
 def main_menu():
@@ -18,7 +18,8 @@ def main_menu():
         print("5. Filter Expenses by Category")
         print("6. Filter Expenses by Date")
         print("7. Update an Expense")
-        print("8. Exit")
+        print("8. Delete option ")
+        print("9. Exit")
 
         choice = input("Enter choice (1-8): ")
 
@@ -95,8 +96,25 @@ def main_menu():
             new_desc = input("New description: ")
             update_expense(expense_id, new_amount, new_desc)
             print("Expense updated.")
-
+        
         elif choice == "8":
+            print("Delete options")
+            print("1. Delete an expense by description")
+            print("2. Delete a user by name")
+            delete_choice = input("Enter choise: ")
+
+            if delete_choice == "1":
+                description = input("Enter the expense description to delete: ")
+                delete_expense_by_description(description)
+
+            elif delete_choice == "2":
+                name = input("Enter the user name to delete: ")
+                delete_user_by_name(name)
+
+            else:
+                print("Invalid choice. Returning to main menu.")
+
+        elif choice == "9":
             print("Goodbye!")
             break
 

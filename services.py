@@ -78,6 +78,23 @@ def filter_expenses_by_date(start_date_str, end_date_str):
         Expense.date <= end_date
     ).order_by(Expense.date.desc()).all()
 
+def delete_user_by_name(name):
+    user = session.query(User).filter(User.name.ilike(name)).first()
+    if user:
+        session.delete(user)
+        session.commit()
+        print(f"User '{user.name}' deleted successfully.")
+    else:
+        print("User not found.")
+
+def delete_expense_by_description(description):
+    expense = session.query(Expense).filter(Expense.description.ilike(description)).first()
+    if expense:
+        session.delete(expense)
+        session.commit()
+        print(f"Expense '{expense.description}' deleted successfully.")
+    else:
+        print("Expense not found.")
 def update_expense(expense_id, amount=None, description=None, date_str=None, user_name=None, category_name=None):
     expense = session.query(Expense).filter_by(id=expense_id).first()
     if not expense:
