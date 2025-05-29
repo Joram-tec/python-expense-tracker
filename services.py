@@ -2,8 +2,6 @@ from database import session
 from models import Expense, User, Category
 from datetime import datetime
 
-# --- Helper functions ---
-
 def get_or_create_user(name):
     user = session.query(User).filter_by(name=name).first()
     if not user:
@@ -21,7 +19,6 @@ def get_or_create_category(name):
     return category
 
 def add_expense(amount, description, date, user_id, category_id):
-    # Try to get existing user and category using their IDs
     user = session.query(User).get(user_id)
     category = session.query(Category).get(category_id)
 
@@ -62,9 +59,6 @@ def get_all_categories():
 
 def filter_expenses_by_category(category_id):
     return session.query(Expense).filter_by(category_id=category_id).order_by(Expense.date.desc()).all()
-
-
-
 
 def filter_expenses_by_category_name(category_name):
     category = session.query(Category).filter_by(name=category_name).first()
