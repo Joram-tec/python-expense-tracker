@@ -1,7 +1,7 @@
 # Contains ORM models for tables
 from sqlalchemy import Column, Integer, String, Float, Date, ForeignKey
 from sqlalchemy.orm import relationship
-from .database import Base
+from database import Base
 
 class Category(Base):
     __tablename__ = "categories"

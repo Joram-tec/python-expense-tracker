@@ -50,6 +50,7 @@ A command-line Python application to help users track and manage their daily exp
 - cd expense_tracker
 
 # INSTALLATION of SQLalchemy
+
 # pip install sqlalchemy 
 
 
