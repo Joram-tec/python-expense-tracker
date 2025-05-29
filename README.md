@@ -73,15 +73,21 @@ A command-line Python application to help users track and manage their daily exp
 
  - Filter by Date
 
+ - Delete option
+
  - Exit
 
 # Example
 - --- Expense Tracker ---
-1. Add Expense
-2. View All Expenses
-3. Filter by Category
-4. Filter by Date
-5. Exit
+1. Add User
+2. Add Category
+3. Add Expense
+4. View All Expenses
+5. Filter by Category
+6. Filter by Date
+7. Update an expense
+8. Delete option
+9. Exit
 
 - Choose an option: 1
 - Your name: Joram
